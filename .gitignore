@@ -1,0 +1,16 @@
+# Logs
+yarn-debug.log*
+yarn-error.log*
+
+# Binaries
+node_modules/
+
+# Builds
+dist/
+**/public/script.js
+
+.idea
+
+backend/build
+frontend/build
+shared/build

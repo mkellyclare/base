@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "workspaces": [
+    "shared",
+    "backend",
+    "frontend"
+  ],
+  "name": "base",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "backend": "yarn workspace backend",
+    "frontend": "yarn workspace frontend",
+    "server": "yarn workspace server"
+  },
+  "devDependencies": {
+    "typescript": "^4.2.4",
+    "prettier": "^2.2.1",
+    "esbuild": "^0.11.11",
+    "esbuild-register": "^2.4.0",
+    "mocha": "^8.3.2",
+    "@types/mocha": "^8.2.2"
+  }
+}

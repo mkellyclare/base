@@ -1,5 +1,5 @@
 {
-  "name": "backend",
+  "name": "@base/backend",
   "private": true,
   "version": "1.0.0",
   "devDependencies": {
@@ -9,6 +9,6 @@
   "dependencies": {
     "express": "^4.17.1",
     "express-promise-router": "^4.1.0",
-    "shared": "^1.0.0"
+    "@base/shared": "^1.0.0"
   }
 }

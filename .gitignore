@@ -11,6 +11,6 @@ dist/
 
 .idea
 
-backend/build
-frontend/build
-shared/build
+packages/backend/build
+packages/frontend/build
+packages/shared/build

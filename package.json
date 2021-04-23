@@ -1,20 +1,16 @@
 {
   "private": true,
-  "workspaces": [
-    "shared",
-    "backend",
-    "frontend"
-  ],
+  "workspaces": ["packages/*"],
   "name": "base",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "backend": "yarn workspace backend",
-    "frontend": "yarn workspace frontend",
-    "server": "yarn workspace server",
-    "dev:backend:esbuild": "esbuild backend/src/index.ts --bundle --platform=node --target=node12.18 --external:express --outfile=./backend/build/index.js --watch",
-    "dev:backend:nodemon": "nodemon  backend/build/index.js  --inspect",
+    "backend": "yarn workspace packages/backend",
+    "frontend": "yarn workspace packages/frontend",
+    "shared": "yarn workspace packages/shared",
+    "dev:backend:esbuild": "esbuild packages/backend/src/index.ts --bundle --platform=node --target=node12.18 --external:express --outfile=./packages/backend/build/index.js --watch",
+    "dev:backend:nodemon": "nodemon  packages/backend/build/index.js  --inspect",
     "dev:backend": "concurrently --kill-others \"yarn dev:backend:esbuild\" \"yarn dev:backend:nodemon\" ",
     "test": "mocha --recursive --require esbuild-register"
   },

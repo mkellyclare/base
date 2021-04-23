@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { lookupStuff } from 'shared/src/lookup-stuff';
+import { lookupStuff } from 'packages/shared/src/lookup-stuff';
 
 export function App(): React.ReactElement {
   const [count, setCount] = React.useState(0);

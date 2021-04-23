@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { lookupStuff } from 'packages/shared/src/lookup-stuff';
+import { lookupStuff } from '@base/shared/src/lookup-stuff';
 
 export function App(): React.ReactElement {
   const [count, setCount] = React.useState(0);
@@ -11,7 +11,7 @@ export function App(): React.ReactElement {
       <h1>Welcome on {thing}!</h1>
       <p>
         This is the main page of our application where you can confirm that it
-        is dynamic by clicking the button below.
+        is dynamic by clicking the button below. Now this is good
       </p>
       <p>Current count: {count}</p>
       <button onClick={() => setCount((prev) => prev + 1)}>Increment</button>

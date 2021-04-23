@@ -1,9 +1,5 @@
-import { lookupStuff } from 'shared/src/lookup-stuff';
+import { createApp } from './app';
 
-export function testing() {
-  console.log('story');
-  lookupStuff('sdfdxx')
-  console.log('HI OK great!! Isnt it just great!!!!!');
-}
+const appServer = createApp();
 
-testing()
+appServer.listen(3000, () => console.log(`App listening at http://localhost:3000 !!!`));

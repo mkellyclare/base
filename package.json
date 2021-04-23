@@ -13,7 +13,7 @@
     "backend": "yarn workspace backend",
     "frontend": "yarn workspace frontend",
     "server": "yarn workspace server",
-    "dev:backend:esbuild": "esbuild backend/src/index.ts --bundle --platform=node --target=node12.18 --outfile=./backend/build/index.js --watch",
+    "dev:backend:esbuild": "esbuild backend/src/index.ts --bundle --platform=node --target=node12.18 --external:express --outfile=./backend/build/index.js --watch",
     "dev:backend:nodemon": "nodemon  backend/build/index.js  --inspect",
     "dev:backend": "concurrently --kill-others \"yarn dev:backend:esbuild\" \"yarn dev:backend:nodemon\" ",
     "test": "mocha --recursive --require esbuild-register"

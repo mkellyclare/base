@@ -12,6 +12,7 @@
     "dev:backend:esbuild": "esbuild packages/backend/src/index.ts --bundle --platform=node --target=node12.18 --external:express --outfile=./packages/backend/build/index.js --watch",
     "dev:backend:nodemon": "nodemon  packages/backend/build/index.js  --inspect",
     "dev:backend": "concurrently --kill-others \"yarn dev:backend:esbuild\" \"yarn dev:backend:nodemon\" ",
+    "dev:frontend": "cd packages/frontend && vite",
     "test": "mocha --recursive --require esbuild-register"
   },
   "devDependencies": {

@@ -6,9 +6,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "backend": "yarn workspace packages/backend",
-    "frontend": "yarn workspace packages/frontend",
-    "shared": "yarn workspace packages/shared",
+    "backend": "yarn workspace @base/backend",
+    "frontend": "yarn workspace @base/frontend",
+    "shared": "yarn workspace @base/shared",
     "dev:backend:esbuild": "esbuild packages/backend/src/index.ts --bundle --platform=node --target=node12.18 --external:express --outfile=./packages/backend/build/index.js --watch",
     "dev:backend:nodemon": "nodemon  packages/backend/build/index.js  --inspect",
     "dev:backend": "concurrently --kill-others \"yarn dev:backend:esbuild\" \"yarn dev:backend:nodemon\" ",

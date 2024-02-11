@@ -3,6 +3,6 @@ import { describe, it } from 'mocha';
 
 describe('testing', () => {
   it('should test something', () => {
-    lookupStuff('testing');
+    console.log(lookupStuff('testing'));
   });
 });
